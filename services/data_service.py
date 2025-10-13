@@ -5,6 +5,7 @@ import json
 from datetime import datetime
 from typing import Optional, Dict, List
 from config.settings import DATA_FOLDER
+from services.api_service import fetch_currency_data
 
 
 def ensure_data_folder() -> None:
@@ -110,7 +111,6 @@ def get_or_fetch_data() -> Optional[List[Dict]]:
         return data
     
     # Keshda bo'lmasa, API dan olish
-    from services.api_service import fetch_currency_data
     data = fetch_currency_data()
     
     if data:
