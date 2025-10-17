@@ -10,13 +10,13 @@ if not BOT_TOKEN:
     raise ValueError("BOT_TOKEN .env faylida topilmadi!")
 
 # API sozlamalari
-CBU_API_URL = os.getenv('CBU_API_URL', 'https://cbu.uz/ru/arkhiv-kursov-valyut/json/')
+CBU_API_URL = os.getenv('CBU_API_URL')
 
 # Ma'lumotlar papkasi
-DATA_FOLDER = os.getenv('DATA_FOLDER', 'currency_data')
+DATA_FOLDER = os.getenv('DATA_FOLDER')
 
 # Til sozlamalari
-DEFAULT_LANGUAGE = os.getenv('DEFAULT_LANGUAGE', 'uz')
+DEFAULT_LANGUAGE = os.getenv('DEFAULT_LANGUAGE')
 
 # Conversation states
 CALCULATOR_FROM = 0
